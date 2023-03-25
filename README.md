@@ -1,6 +1,6 @@
 # HelpGenie
 
-음성인식 기능과 수어인식 기능이 탑재된 AICC 헬프지니
+음성인식 기능과 수어인식 기능이 탑재된 AICC
 
 ![1](https://user-images.githubusercontent.com/80738030/227720846-c38a4b3f-3c63-4e8a-a588-8e3e81329ead.png)
 
