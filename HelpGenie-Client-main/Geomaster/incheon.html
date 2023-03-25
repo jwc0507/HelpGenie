@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>인천광역시 KT 대리점</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_div { height: 100% }
+    </style>
+    <script type="text/javascript" src="https://gis.kt.com/maps/v3.0/sdk.js?key=8f890813438d9821291540fd77b92b0d3f5747208a05374bfae4373a7f402c31d4dced8f"></script>
+    <script type="text/javascript">
+   
+    function initialize () {
+      var map;
+      var marker, leafMarker, animMarker, flatMarker;
+      var initPosition = new olleh.maps.LatLng(37.45640856150518, 126.6894522807521);
+      var mapOpts = {
+        zoom: 10,
+        center: initPosition,
+        mapTypeId: 'ROADMAP'
+      };
+      var map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
+
+
+      initPosition = new olleh.maps.LatLng(37.45814295527608, 126.69234538729133);
+      animMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 링커스 인천지사', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng(37.46034369827548, 126.69584993767066);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 인천지사', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+
+      initPosition = new olleh.maps.LatLng(37.45149036556774, 126.68731338178073);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 인천네트워크지사', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      
+
+    };
+    window.onload = initialize;
+  	</script>
+  </head>
+  <body>
+    <div id="map_div"></div>
+  </body>
+</html>

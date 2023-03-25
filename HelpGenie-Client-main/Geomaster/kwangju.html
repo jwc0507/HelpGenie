@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>광주광역시 KT 대리점</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_div { height: 100% }
+    </style>
+    <script type="text/javascript" src="https://gis.kt.com/maps/v3.0/sdk.js?key=8f890813438d9821291540fd77b92b0d3f5747208a05374bfae4373a7f402c31d4dced8f"></script>
+    <script type="text/javascript">
+   
+    function initialize () {
+      var map;
+      var marker, leafMarker, animMarker, flatMarker;
+      var initPosition = new olleh.maps.LatLng(35.150327806101224, 126.90676118021058);
+      var mapOpts = {
+        zoom: 10,
+        center: initPosition,
+        mapTypeId: 'ROADMAP'
+      };
+      var map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
+
+      marker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng(35.153326716535815, 126.89396999982948);
+      animMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 서광주지점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng(35.1493659984594, 126.86504526268035);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 광주네트워크서비스센터', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+
+      initPosition = new olleh.maps.LatLng(35.13655974091684, 126.91049385740628);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 광주NSC', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      
+      initPosition = new olleh.maps.LatLng(35.1501172689484, 126.90955067755091);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 동광주지점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+      
+      initPosition = new olleh.maps.LatLng(35.15214935488822, 126.91889380344614);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 광주지사', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng(35.146271214455254, 126.92358848608514);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+          //anchor: new olleh.maps.Point(22, 97)
+        },
+
+        caption: {title:'KT 광주 센터', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+
+    };
+    window.onload = initialize;
+  	</script>
+  </head>
+  <body>
+    <div id="map_div"></div>
+  </body>
+</html>

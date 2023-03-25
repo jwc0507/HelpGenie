@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>대전광역시 KT 대리점</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_div { height: 100% }
+    </style>
+    <script type="text/javascript" src="https://gis.kt.com/maps/v3.0/sdk.js?key=8f890813438d9821291540fd77b92b0d3f5747208a05374bfae4373a7f402c31d4dced8f"></script>
+    <script type="text/javascript">
+   
+    function initialize () {
+      var map;
+      var marker, leafMarker, animMarker, flatMarker;
+      var initPosition = new olleh.maps.LatLng(36.3504564,127.3760854);
+      var mapOpts = {
+        zoom: 10,
+        center: initPosition,
+        mapTypeId: 'ROADMAP'
+      };
+      var map = new olleh.maps.Map(document.getElementById('map_div'), mapOpts);
+
+      marker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng(36.3505072,127.3818671);
+      animMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+        },
+        caption: {title:'KT플라자 둔산점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng(36.3510903,127.3867554);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+        },
+
+        caption: {title:'둔산동 KT', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+
+      initPosition = new olleh.maps.LatLng(36.3495158,127.3733531);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+        },
+
+        caption: {title:'KT 타임월드점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng( 36.3496913,127.3644871);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+        },
+
+        caption: {title:'KT 대리점 월평점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      initPosition = new olleh.maps.LatLng( 36.3496913,127.3644871);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+        },
+
+        caption: {title:'KT 대리점 월평점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+     
+      initPosition = new olleh.maps.LatLng(36.3447571,127.3860927);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+        },
+
+        caption: {title:'KT 대리점 탄방점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+
+      initPosition = new olleh.maps.LatLng(36.3484876,127.3701854);
+      leafMarker = new olleh.maps.overlay.Marker({
+        position: initPosition,
+        animation: olleh.maps.overlay.Marker.BOUNCE,
+        icon: {
+          url: 'kori.png',
+          size: new olleh.maps.Size(40, 53),
+        },
+
+        caption: {title:'KT 대리점 향촌점', color:'white', backgroundColor:'black'},
+        map: map
+      });
+
+      
+
+      
+
+    };
+    window.onload = initialize;
+  	</script>
+  </head>
+  <body>
+    <div id="map_div"></div>
+  </body>
+</html>
